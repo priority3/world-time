@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  hello
+  <Hello name="priority" />
 </template>
 
 <style>
