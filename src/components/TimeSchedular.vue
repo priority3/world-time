@@ -2,8 +2,7 @@
 </script>
 
 <template>
-  <div>
+  <div p4>
     {{ zoneNames }}
   </div>
 </template>
-

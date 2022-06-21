@@ -5,8 +5,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "skipLibCheck": true,
-    "types": ["vue/ref-macros"]
+    "skipLibCheck": true
+    // "types": ["vue/ref-macros"]
   },
   "exclude": [
     "**/dist/**"

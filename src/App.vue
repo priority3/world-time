@@ -2,14 +2,17 @@
 </script>
 
 <template>
-  <div border="~ gray/20" m2>
-    <ActionBar />
-    <TimeSchedular />
+  <div font-sans bg-canvas hscreen>
+    <NavBar />
+    <div border="~ gray/20" m4 bg-base shadow>
+      <ActionBar />
+      <TimeSchedular />
+    </div>
   </div>
 </template>
 
 <style>
-html {
+.dark {
   background: #222;
   color: white;
   color-scheme: dark;
