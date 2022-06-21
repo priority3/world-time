@@ -3,6 +3,11 @@
 
 <template>
   <div p4>
-    {{ zoneNames }}
+    <div
+      v-for="zone of zoneNames.value"
+      :key="zone.name"
+    >
+      <TimezoneItem :timezone="zone" />
+    </div>
   </div>
 </template>

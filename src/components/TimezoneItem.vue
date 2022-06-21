@@ -11,12 +11,12 @@ const offset = $computed(() => timezone.offset > 0 ? `+${timezone.offset}` : tim
 
 <template>
   <div
-    flex="~" gap-2 items-center
+    flex="~" gap-2 items-center justify-start
   >
-    <div w-8 op50 font-bold ma>
+    <div w-8 op50 font-bold ma text-center>
       {{ offset }}
     </div>
-    <div w-30 flex="~ col" text-left flex-auto>
+    <div w-30 flex="~ col" text-left flex-auto pb2>
       <div>
         {{ city }}
       </div>
