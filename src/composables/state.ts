@@ -1,4 +1,4 @@
-import type { Timezone } from '../types';
+import type { Timezone } from '../types'
 
 export const zoneNames = ref<Timezone[]>([])
 
