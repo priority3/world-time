@@ -25,7 +25,7 @@
           @click="moveZone(zone, -1)"
         />
         <button
-          v-if="idx !== zones.value.length"
+          v-if="idx !== zones.value.length - 1"
           icon-btn i-carbon-caret-down
           title="Move down"
           @click="moveZone(zone, 1)"

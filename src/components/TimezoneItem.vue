@@ -8,8 +8,10 @@ const formatter = new Intl.DateTimeFormat('en-US', {
   minute: 'numeric',
   hour: 'numeric',
 })
-const state = $computed(() => timezone.name.split('/')[0].replace(/_/g, ' '))
-const city = $computed(() => timezone.name.split('/')[1].replace(/_/g, ' '))
+const state = $computed(() => {
+  return timezone.name.split('/')[0].replace(/_/g, ' ')
+})
+const city = $computed(() => timezone.name.split('/')[1]?.replace(/_/g, ' ') || '')
 const offset = $computed(() => timezone.offset > 0 ? `+${timezone.offset}` : timezone.offset)
 const time = $computed(() => formatter.format(now.value))
 </script>
