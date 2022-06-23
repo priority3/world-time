@@ -4,7 +4,7 @@
 <template>
   <div font-sans bg-canvas h-screen>
     <NavBar />
-    <div border="~ gray/20" m4 bg-base shadow>
+    <div border="~ gray/20" mx8 pt8 bg-base shadow>
       <ActionBar />
       <TimeSchedular />
     </div>
