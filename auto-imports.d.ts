@@ -247,6 +247,7 @@ declare global {
   const watchWithFilter: typeof import('@vueuse/core')['watchWithFilter']
   const whenever: typeof import('@vueuse/core')['whenever']
   const zoneNames: typeof import('./src/composables/state')['zoneNames']
+  const zones: typeof import('./src/composables/state')['zones']
 }
 // for vue template auto import
 declare module 'vue' {
@@ -497,5 +498,6 @@ declare module 'vue' {
     watchWithFilter: typeof import('@vueuse/core')['watchWithFilter']
     whenever: typeof import('@vueuse/core')['whenever']
     zoneNames: typeof import('./src/composables/state')['zoneNames']
+    zones: typeof import('./src/composables/state')['zones']
   }
 }

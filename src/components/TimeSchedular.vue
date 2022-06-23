@@ -4,8 +4,9 @@
 <template>
   <div p4>
     <div
-      v-for="zone of zoneNames.value"
+      v-for="zone of zones.value"
       :key="zone.name"
+      px4 py2 border="b base"
     >
       <TimezoneItem :timezone="zone" />
     </div>
