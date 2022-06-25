@@ -34,3 +34,4 @@ export function moveZone(timeZone: Timezone, num: number) {
 const userTimezone = new window.Intl.DateTimeFormat().resolvedOptions().timeZone
 if (!zoneNames.value.length)
   zoneNames.value.push(userTimezone)
+

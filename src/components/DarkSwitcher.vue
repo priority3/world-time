@@ -6,7 +6,6 @@ const toggleDark = useToggle(isDark)
 <template>
   <button
     i-carbon-sun dark:i-carbon-moon
-    text-3xl
     @click="toggleDark()"
   >
     <!-- {{ isDark ? 'Dark' : 'Light' }} -->
