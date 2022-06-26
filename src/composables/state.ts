@@ -1,9 +1,11 @@
 import type { Timezone } from '../types'
-
+const userTimezone = new window.Intl.DateTimeFormat().resolvedOptions().timeZone
 export const now = useNow({
   interval: 30 * 1000,
 })
 export const zoneNames = useStorage<string[]>('world-time-zones', [])
+export const currentZone = ref(userTimezone)
+export const currentOffset = computed(() => timezones.find(i => i.name === currentZone.value).offset)
 export const zones = computed(() => zoneNames.value.map(name => timezones.find(i => i.name === name)))
 export function addToTimezone(timezone: Timezone) {
   zoneNames.value.push(timezone.name)
@@ -31,7 +33,7 @@ export function moveZone(timeZone: Timezone, num: number) {
   zoneNames.value[swapInd] = timeZone.name
   zoneNames.value[ind] = temp
 }
-const userTimezone = new window.Intl.DateTimeFormat().resolvedOptions().timeZone
+
 if (!zoneNames.value.length)
   zoneNames.value.push(userTimezone)
 

@@ -12,7 +12,10 @@ const state = $computed(() => {
   return timezone.name.split('/')[0].replace(/_/g, ' ')
 })
 const city = $computed(() => timezone.name.split('/')[1]?.replace(/_/g, ' ') || '')
-const offset = $computed(() => timezone.offset > 0 ? `+${timezone.offset}` : timezone.offset)
+const offset = $computed(() => {
+  const offest = timezone.offset - currentOffset.value
+  return offest > 0 ? `+${offest}` : offest
+})
 const time = $computed(() => formatter.format(now.value))
 </script>
 
@@ -20,7 +23,11 @@ const time = $computed(() => formatter.format(now.value))
   <div
     flex="~" gap-2 items-center justify-start flex-wrap
   >
-    <div w-8 op50 font-bold ma text-center>
+    <div
+      w-8 op80 font-bold ma text-center
+      :title="`${timezone.offset > 0 ? `+${timezone.offset}` : timezone.offset} GMT`"
+      cursor-pointer
+    >
       {{ offset }}
     </div>
     <div w-30 flex="~ col" text-left flex-auto pb2>
