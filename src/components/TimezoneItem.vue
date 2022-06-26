@@ -18,7 +18,7 @@ const time = $computed(() => formatter.format(now.value))
 
 <template>
   <div
-    flex="~" gap-2 items-center justify-start
+    flex="~" gap-2 items-center justify-start flex-wrap
   >
     <div w-8 op50 font-bold ma text-center>
       {{ offset }}
@@ -37,6 +37,7 @@ const time = $computed(() => formatter.format(now.value))
     <div tabular-nums>
       {{ time }}
     </div>
+    <slot />
   </div>
 </template>
 
